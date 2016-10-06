@@ -1,0 +1,15 @@
+<h2 class="page-header">domain name system (DNS)</h2>
+<p>The domain name system (DNS) maps internet domain names to the internet protocol (IP) network addresses they represent and enables websites to use names, rather than difficult-to-remember IP addresses.</p>
+
+<p>Domain names give people a more intuitive way to access content or services than IP addresses: www.techtarget.com instead of 206.19.49.149, for example. Most URLs are built around the domain name of the web server fielding the request: e.g., </p>
+
+<h3>Why is DNS important?</h3>
+<p>Having a single DNS server somewhere that maintained a complete central list of domain name or IP address mappings would be impractical. There are too many mappings, they change too often and the number of requests for address or name lookups would overwhelm any system.  As a result, DNS is distributed throughout the internet in a hierarchy of authority. Access providers and enterprises, as well as governments, universities and other organizations, typically have their own assigned ranges of IP addresses and an assigned domain name; they also typically run DNS servers to manage the mapping of those names to those addresses.</p>
+
+<h3>How does DNS work?</h3>
+<p>DNS servers answer questions from both inside and outside their own domains. When a server receives a request from outside the domain for information about a name or address inside the domain, it provides the authoritative answer. When a server receives a request from inside its own domain for information about a name or address outside that domain, it passes the request out to another server -- usually one managed by its internet service provider. If that server does not know the answer or the authoritative source for the answer, it will reach out to the DNS servers for the top-level domain -- e.g., for all of .com or .edu. Then, it will pass the request down to the authoritative server for the specific domain -- e.g., techtarget.com or stkate.edu; the answer flows back along the same path.</p>
+
+<br><center><a href="https://2.bp.blogspot.com/-I2VWrqQosHc/V_Y8f1QZu4I/AAAAAAAAEZQ/eGe84Z-Sbc0W3nIp7lxVxu4DesHgo32OwCLcB/s1600/How-DNS-Work.png" imageanchor="1"><img border="0" src="https://2.bp.blogspot.com/-I2VWrqQosHc/V_Y8f1QZu4I/AAAAAAAAEZQ/eGe84Z-Sbc0W3nIp7lxVxu4DesHgo32OwCLcB/s1600/How-DNS-Work.png"></a></center><br>
+
+<h3>How does DNS increase web performance?</h3>
+<p>To promote efficiency, servers can cache the answers they receive for a set amount of time. This allows them to respond more quickly the next time a request for the same lookup comes in. For example, if everyone in an office needs to access the same training video on a particular website on the same day, the local DNS server will ordinarily only have to resolve the name once, and then it can serve all the other requests out of its cache. The length of time the record is held -- the time to live -- is configurable; longer values decrease the load on servers, shorter values ensure the most accurate responses.

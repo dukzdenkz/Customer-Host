@@ -6,10 +6,6 @@ $(window).load(function() {
 	$('body').delay(350).css({'overflow':'visible'});
 })
 
-
-//enter the count down date using the format year, month, day, time:time
-$(".count-down").ccountdown(2016,11,26,'13:00');
-
 // Utilizing the Modernizr object created to implement placeholder functionality
 function hasPlaceholderSupport() {
   var input = document.createElement('input');
